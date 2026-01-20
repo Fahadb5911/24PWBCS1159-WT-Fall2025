@@ -2,51 +2,156 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Navigation</title>
-    <meta name="description"
-        content="Lab index for Web Technologies (Fall 2025) — Fahad Bilal Kakar . Links to lab exercises and project pages.">
-    <meta name="keywords" content="Fahad Bilal Kakar, UET Peshawar, Web Technologies, labs">
-    <meta name="author" content="Fahad Bilal Kakar">
-    <meta name="robots" content="index,follow">
-    <meta property="og:title" content="Fahad Bilal Kakar — Lab Navigation">
-    <meta property="og:description" content="Links to Lab 1 and Lab 2 exercises for Web Technologies (Fall 2025).">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Dashboard</title>
     <style>
-        .nav-container {
-            padding: 5px;
+        body {
+            font-family: "Poppins", sans-serif;
+            background: linear-gradient(135deg, #3565c5, #e3f2fd);
+            color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background: #ba8585;
+            padding: 35px 30px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-2px);
+        }
+
+        .cat-box {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .cat-box img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 3px solid #ae9494;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hover-text {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #222;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .cat-box:hover img {
+            transform: scale(1.06);
+        }
+
+        .cat-box:hover .hover-text {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-6px);
         }
 
         h1 {
-            margin-bottom: 20px;
-            color: #222;
+            margin-top: 30px;
             font-size: 1.9rem;
+            color: #222;
+            font-weight: 600;
+        }
+
+        .tasks {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
         }
 
         .lab-link {
-            display: block;
-            margin: 8px 0;
-            color: #0078d4;
-            text-decoration: underline;
-            font-size: 1.2rem;
-            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 80%;
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 12px 0;
+            border: 1px solid #eee;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
         }
 
         .lab-link::before {
-            content: "🔗 ";
+            content: "➤";
+            font-size: 1.1rem;
+            color: #c08c1d;
+            position: absolute;
+            left: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .lab-link:hover::before {
+            transform: translateX(5px);
         }
 
         .lab-link:hover {
-            color: #5d656b;
+            background: #fff;
+            border-color: #c08c1d;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+            color: #c08c1d;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .lab-link {
+                width: 100%;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="nav-container">
+    <div class="container">
+
         <h1>Lab Tasks</h1>
-        <a class="lab-link" href="./Lab 01/index.html">Lab-01</a>
-        <a class="lab-link" href="./Lab02-folder/index.html">Lab-02</a>
+
+        <div class="tasks">
+            <a class="lab-link" href="./Lab01-folder/index.html">Lab 01</a>
+            <a class="lab-link" href="./Lab02-folder/index.html">Lab 02</a>
+            <a class="lab-link" href="./Lab03&04-folder/index.html">Lab 03 & 04</a>
+            <a class="lab-link" href="./Lab05-folder/index.html">Lab 05</a>
+        </div>
     </div>
 </body>
 

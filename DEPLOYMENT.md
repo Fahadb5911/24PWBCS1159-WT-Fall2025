@@ -1,16 +1,15 @@
 # Deployment record
 
-Repository: Fahadb5911/24PWBCS1159-WT-Fall2025  
+Repository: faizan-ahmad5/24PWBCS1114-WT-Fall25
 Date: 2025-10-11
 
 Site URL (GitHub Pages):
-https://github.com/Fahadb5911/24PWBCS1159-WT-Fall2025/
+https://faizan-ahmad5.github.io/24PWBCS1114-WT-Fall25/
 
 Summary
 
 - Changes pushed to `main` and site published via GitHub Pages.
 - Custom `404.html` exists at the repo root and is served for missing pages.
-- SEO meta tags and lazy-loading attributes were added to HTML files.
 
 To update:
 
@@ -20,7 +19,3 @@ To update:
 4. git push origin main
 
 That's all.
-
-```
-
-```
